@@ -1,13 +1,15 @@
 console.log('js-snack-es6')
 /*
 *SNACK 1*
-Dwayne Johnson ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
-Ci ha lasciato il nome del tavolo (“Tavolo Vip”) e la lista degli invitati in ordine di posto:
+Dwayne Johnson ci ha chiesto di creare i segnaposto
+per il tavolo degli invitati alla sua mega festa vip.
+Ci ha lasciato il nome del tavolo (“Tavolo Vip”) 
+e la lista degli invitati in ordine di posto:
 [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 
 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
 Ma la tipografia per stampare il tutto vuole
- che le mandiamo una lista di ospiti in un formato specifico, 
- per cui dobbiamo fare in modo che ogni ospite sia un oggetto javascript che ha come attributi:
+che le mandiamo una lista di ospiti in un formato specifico, 
+per cui dobbiamo fare in modo che ogni ospite sia un oggetto javascript che ha come attributi:
 nome del tavolo,
 nome dell’ospite,
 posto occupato.
@@ -17,15 +19,52 @@ esempio:
   nomeTavolo: 'Tavolo VIP',
   nomeOspite: 'Brad Pitt',
   posto: 1
+}*/
+//snack1
+
+function vipCard(table, nome, place){
+    const vip = {
+        nomeTavolo: table,
+        nomeOspite: nome,
+        posto:place
+    }
+    return vip
 }
-*SNACK 2*
+let tavoloVip = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 
+'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
+let vipList = []
+for(let i = 0; i < tavoloVip.length; i++){
+    const table = 'Tavolo VIP';
+    const name = tavoloVip[i];
+    const place = i
+    console.log(table, name, place);
+    const persona = vipCard(table, name, place)
+    vipList.push(persona)
+    console.log(persona)
+}
+
+
+
+console.log(vipList);
+
+
+
+
+
+
+
+
+/**SNACK 2*
 Abbiamo un elenco degli studenti di una facoltà, identificati da id, 
 Nome e somma totale dei loro voti di esame...
 1. Per preparare l’aula di un nuovo corso, 
-dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo
+dobbiamo stampare le targhe col nome degli studenti:
+ creare una lista contenente il loro nome tutto in maiuscolo
 ES (Marco della Rovere => MARCO DELLA ROVERE);
-2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
-3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
+2. Dobbiamo creare una lista 
+di tutti gli studenti che hanno un totale di voti superiore a 70
+3. Dobbiamo creare una lista 
+di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
 Questo è l’elenco degli studenti:
 Id   Name                    Grades
 213  Marco della Rovere      78
@@ -35,3 +74,5 @@ Id   Name                    Grades
 196  Luigi Grimaldello 	  68
 102  Piero della Francesca   50
 120  Francesca da Polenta    84*/
+
+
