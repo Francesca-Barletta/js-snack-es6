@@ -21,28 +21,40 @@ esempio:
   posto: 1
 }*/
 //snack1
-
-function vipCard(table, nome, place) {
-    const vip = {
-        nomeTavolo: table,
-        nomeOspite: nome,
-        posto: place
-    }
-    return vip
-}
 let tavoloVip = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez',
-    'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
-let vipList = []
-for (let i = 0; i < tavoloVip.length; i++) {
-    const table = 'Tavolo VIP';
-    const name = tavoloVip[i];
-    const place = i
-    console.log(table, name, place);
-    const persona = vipCard(table, name, place)
-    vipList.push(persona)
-    console.log(persona)
-}
+    'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
+
+//function vipCard(table, nome, place) {
+//    const vip = {
+//        nomeTavolo: table,
+//        nomeOspite: nome,
+//        posto: place
+//    }
+//    return vip
+//}
+
+//let vipList = []
+//for (let i = 0; i < tavoloVip.length; i++) {
+//    const table = 'Tavolo VIP';
+//    const name = tavoloVip[i];
+//    const place = i
+//    console.log(table, name, place);
+//    const persona = vipCard(table, name, place)
+//    vipList.push(persona)
+//    console.log(persona)
+//}
+//console.log(vipList);
+
+const vipList = tavoloVip.map((element, i, array) =>{
+    const persona = {
+        nomeTavolo : 'Tavolo VIP',
+        nomeOspite: tavoloVip[i],
+        posto: i
+    }
+    return persona;
+})
 console.log(vipList);
+
 
 
 
