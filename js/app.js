@@ -37,7 +37,7 @@ let tavoloVip = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', '
 //for (let i = 0; i < tavoloVip.length; i++) {
 //    const table = 'Tavolo VIP';
 //    const name = tavoloVip[i];
-//    const place = i
+//    const place = i + 1
 //    console.log(table, name, place);
 //    const persona = vipCard(table, name, place)
 //    vipList.push(persona)
@@ -49,7 +49,7 @@ const vipList = tavoloVip.map((element, i, array) =>{
     const persona = {
         nomeTavolo : 'Tavolo VIP',
         nomeOspite: tavoloVip[i],
-        posto: i
+        posto: i + 1
     }
     return persona;
 })
