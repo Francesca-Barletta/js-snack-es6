@@ -172,3 +172,76 @@ console.log(seventyAndId);
 //VERSIONE CORTA
 //const overSeventy = formattedStudents.filter((student) => student.grades > 70)
 //const seventyAndId = overSeventy.filter((student) => student.id > 120)
+
+/*
+SNACK 3
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare in console la bici con peso minore utilizzando destructuring e template literal*/
+const bicilette = [
+    {
+        nome:'bianchi',
+        pesoKg: 7
+    },
+    {
+        nome:'cannondale',
+        pesoKg: 6
+    },
+    {
+        nome:'fondriest',
+        pesoKg: 9
+    },
+    {
+        nome:'de rosa',
+        pesoKg: 8
+    },
+    {
+        nome:'atala',
+        pesoKg: 10
+    },
+    {
+        nome:'moser',
+        pesoKg: 5
+    }
+]
+console.log(bicilette);
+
+//creo un array contenente solo i valori di pesoKg
+const pesoBiciclette = bicilette.map((element, i , array) => {
+    const peso = element.pesoKg
+    return peso
+})
+console.log(pesoBiciclette);
+// mi ritorna come primo numero dell'array il numero più piccolo
+pesoBiciclette.sort(comparaBici);
+console.log(pesoBiciclette);
+const biciPiuLeggera = pesoBiciclette[0]
+console.log(biciPiuLeggera)//5kg
+
+
+bicilette.forEach((element, i , array) =>{
+    const bici = bicilette[i];
+    const {nome, pesoKg} = bici;
+    //console.log(bici);
+    //console.log(biciPiuLeggera);
+    //console.log(bici.pesoKg)
+    if(bici.pesoKg === biciPiuLeggera){
+        console.log(`la bicletta da corsa marca ${nome} pesa kg ${pesoKg} ed è la più leggera`)
+    }
+})
+
+//funzione che compara i pesi
+function comparaBici (a, b){
+    return a - b;
+}
+
+
+
+
+/*
+SNACK 4
+Creare un array di oggetti di squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.*/
