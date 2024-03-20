@@ -274,17 +274,35 @@ const squadre = [
  }
 
 ]
+
 squadre.forEach((element,i, array) =>{
     let squadra = squadre[i];
     let {nomeSquadra, puntiFatti, falliSubiti} = squadra;
     squadra.puntiFatti = getRandomArbitrary(1, 20);
     console.log(puntiFatti)
     squadra.falliSubiti = getRandomArbitrary(1, 20);
+    
 })
-console.log(squadre)
+console.log(squadre);
+let squadre2 =[];
+for(let i = 0; i < squadre.length; i++){
+    let {nomeSquadra, puntiFatti, falliSubiti} = squadre[i]
+    squadre2.push(nomeSquadra, falliSubiti)
+}
+console.log(squadre2)
+
+//Infine usando la destrutturazione creiamo un nuovo array 
+//i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
 
+//const squadre2 = squadre.map((squadra, i, squadre) =>{
+//    let nome = squadra.nomeSquadra
+//    let falli = squadra.falliSubiti
+//    return (nome, falli)
+//})
+//console.log(squadre2);
+//
 
 //genero numeri random da 1 a 20 sia per i punti che per i falli
 function getRandomArbitrary(min, max) {
