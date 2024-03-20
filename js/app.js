@@ -180,27 +180,27 @@ Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e pe
 Stampare in console la bici con peso minore utilizzando destructuring e template literal*/
 const bicilette = [
     {
-        nome:'bianchi',
+        nome:'Bianchi',
         pesoKg: 7
     },
     {
-        nome:'cannondale',
+        nome:'Cannondale',
         pesoKg: 6
     },
     {
-        nome:'fondriest',
+        nome:'Fondriest',
         pesoKg: 9
     },
     {
-        nome:'de rosa',
+        nome:'De rosa',
         pesoKg: 8
     },
     {
-        nome:'atala',
+        nome:'Atala',
         pesoKg: 10
     },
     {
-        nome:'moser',
+        nome:'Moser',
         pesoKg: 5
     }
 ]
