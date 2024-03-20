@@ -244,4 +244,60 @@ Creare un array di oggetti di squadre di calcio.
 Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
-Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.*/
+Infine usando la destrutturazione creiamo un nuovo array 
+i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.*/
+const squadre = [
+ {
+    nomeSquadra: 'Lazio',
+    puntiFatti: 0,
+    falliSubiti: 0
+ },
+ {
+    nomeSquadra: 'Roma',
+    puntiFatti: 0,
+    falliSubiti: 0
+ },
+ {
+    nomeSquadra: 'Inter',
+    puntiFatti: 0,
+    falliSubiti: 0
+ },
+ {
+    nomeSquadra: 'Juventus',
+    puntiFatti: 0,
+    falliSubiti: 0
+ },
+ {
+    nomeSquadra: 'Milan',
+    puntiFatti: 0,
+    falliSubiti: 0
+ }
+
+]
+squadre.forEach((element,i, array) =>{
+    let squadra = squadre[i];
+    let {nomeSquadra, puntiFatti, falliSubiti} = squadra;
+    squadra.puntiFatti = getRandomArbitrary(1, 20);
+    console.log(puntiFatti)
+    squadra.falliSubiti = getRandomArbitrary(1, 20);
+})
+console.log(squadre)
+
+
+
+
+//genero numeri random da 1 a 20 sia per i punti che per i falli
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+//let puntiRadom = [];  
+//let falliSubitiRandom = [];
+//
+//while(puntiRadom.length < 5){
+//    puntiRadom.push(getRandomArbitrary(1, 20));
+//}console.log(puntiRadom);
+//
+//while(falliSubitiRandom.length < 5){
+//    falliSubitiRandom.push(getRandomArbitrary(1, 20));
+//}console.log(falliSubitiRandom);
