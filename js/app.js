@@ -55,6 +55,18 @@ const vipList = tavoloVip.map((element, i, array) =>{
 })
 console.log(vipList);
 
+//const vipList = tavoloVip.map((nomeOspite, i) =>
+//vipCard(nomeOspite, i+1)
+//return vipList)
+
+/*
+Crea un array di oggetti che rappresentano delle persone. 
+Ogni persona ha un nome, un cognome e un’età.
+Crea quindi un nuovo array inserendo, per ogni persona, 
+una frase con il nome e cognome e l’indicazione se può guidare, in base all’età.*/
+
+
+
 
 
 
@@ -106,29 +118,57 @@ console.log(studentList);
 //console.log(marco.name);
 
 
-function capitalize(string) {
-    let newName = string.toUpperCase();
-    return newName;
-}
 
-studentList.forEach((element, i) => {
-    const upperName = capitalize(element.name);
-    studentList[i].name = upperName;
+
+//const formattedStudents = []
+const formattedStudents = studentList.map ((student) =>{
+    const newStudent = {
+        id:student.id,
+        name:student.name.toUpperCase(),
+        grades:student.grades
+    }
+    return newStudent
 })
-//console.log(studentList);
+console.log(formattedStudents)
+//for(let i = 0; i < studentList.length; i++){
+//    const name = studentList[i].name;
+//    const id = studentList[i].id;
+//    const grades = studentList[i].grades;
+//    const student = {
+//        id:id,
+//        name:name,
+//        grades:grades
+//    }
+//    formattedStudents.push(student)
+//}
+
+
+//function capitalize(string) {
+//    let newName = string.toUpperCase();
+//    return newName;
+//}
+//
+//formattedStudents.forEach((element, i) => {
+//    const upperName = capitalize(element.name);
+//    formattedStudents[i].name = upperName;
+//})
+//console.log(formattedStudents);
 
 let overSeventy = [];
-for (let i = 0; i < studentList.length; i++) {
-    const singleStudent = studentList[i]
+for (let i = 0; i < formattedStudents.length; i++) {
+    const student = formattedStudents[i]
     //console.log(singleStudent);
-    if (singleStudent.grades > 70) {
-        overSeventy.push(singleStudent);
+    if (student.grades > 70) {
+        overSeventy.push(student);
     }
 } console.log(overSeventy);
 const seventyAndId = overSeventy.filter((element, i, array) =>{
-    const singleStudent = overSeventy[i];
-    if(singleStudent.id > 120){
+    const student = overSeventy[i];
+    if(student.id > 120){
         return true
     }
 });
 console.log(seventyAndId);
+//VERSIONE CORTA
+//const overSeventy = formattedStudents.filter((student) => student.grades > 70)
+//const seventyAndId = overSeventy.filter((student) => student.id > 120)
