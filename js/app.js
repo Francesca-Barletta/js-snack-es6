@@ -236,7 +236,7 @@ console.log(bicilette);
 //}
 //
 //METODO DOPO IL RECAP
-const {nome, pesoKg} = bicilette[i];
+const {nome, pesoKg} = bicilette[i];////ERRORE
 let biciPiuLeggera = bicilette[0];
 for(let i = 1; i < bicilette.length; i++){
     const biciCorrente = bicilette[i]
