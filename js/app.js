@@ -236,7 +236,7 @@ console.log(bicilette);
 //}
 //
 //METODO DOPO IL RECAP
-const {nome, pesoKg} = bicilette[i];////ERRORE
+//const {nome, pesoKg} = bicilette[i];////ERRORE
 let biciPiuLeggera = bicilette[0];
 for(let i = 1; i < bicilette.length; i++){
     const biciCorrente = bicilette[i]
@@ -246,7 +246,7 @@ for(let i = 1; i < bicilette.length; i++){
     }
     
 }
-console.log(`la bicletta da corsa marca ${nome} pesa kg ${pesoKg} ed è la più leggera`)
+console.log(`la bicletta da corsa marca ${biciPiuLeggera.nome} pesa kg ${biciPiuLeggera.pesoKg} ed è la più leggera`)
 
 
 /*
@@ -290,7 +290,7 @@ squadre.forEach((element,i, array) =>{
     let squadra = squadre[i];
     let {nomeSquadra, puntiFatti, falliSubiti} = squadra;
     squadra.puntiFatti = getRandomArbitrary(1, 20);
-    console.log(puntiFatti)
+   
     squadra.falliSubiti = getRandomArbitrary(1, 20);
     
 })
