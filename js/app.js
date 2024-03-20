@@ -207,35 +207,46 @@ const bicilette = [
 console.log(bicilette);
 
 //creo un array contenente solo i valori di pesoKg
-const pesoBiciclette = bicilette.map((element, i , array) => {
-    const peso = element.pesoKg
-    return peso
-})
-console.log(pesoBiciclette);
-// mi ritorna come primo numero dell'array il numero più piccolo
-pesoBiciclette.sort(comparaBici);
-console.log(pesoBiciclette);
-const biciPiuLeggera = pesoBiciclette[0]
-console.log(biciPiuLeggera)//5kg
-
-
-bicilette.forEach((element, i , array) =>{
-    const bici = bicilette[i];
-    const {nome, pesoKg} = bici;
-    //console.log(bici);
-    //console.log(biciPiuLeggera);
-    //console.log(bici.pesoKg)
-    if(bici.pesoKg === biciPiuLeggera){
-        console.log(`la bicletta da corsa marca ${nome} pesa kg ${pesoKg} ed è la più leggera`)
+//const pesoBiciclette = bicilette.map((element, i , array) => {
+//    const peso = element.pesoKg
+//    return peso
+//})
+//console.log(pesoBiciclette);
+//// mi ritorna come primo numero dell'array il numero più piccolo
+//pesoBiciclette.sort(comparaBici);
+//console.log(pesoBiciclette);
+//const biciPiuLeggera = pesoBiciclette[0]
+//console.log(biciPiuLeggera)//5kg
+//
+//
+//bicilette.forEach((element, i , array) =>{
+//    const bici = bicilette[i];
+//    const {nome, pesoKg} = bici;
+//    //console.log(bici);
+//    //console.log(biciPiuLeggera);
+//    //console.log(bici.pesoKg)
+//    if(bici.pesoKg === biciPiuLeggera){
+//        console.log(`la bicletta da corsa marca ${nome} pesa kg ${pesoKg} ed è la più leggera`)
+//    }
+//})
+//
+////funzione che compara i pesi
+//function comparaBici (a, b){
+//    return a - b;
+//}
+//
+//METODO DOPO IL RECAP
+const {nome, pesoKg} = bicilette[i];
+let biciPiuLeggera = bicilette[0];
+for(let i = 1; i < bicilette.length; i++){
+    const biciCorrente = bicilette[i]
+    console.log(biciCorrente);
+    if(biciCorrente.pesoKg < biciPiuLeggera.pesoKg){
+        biciPiuLeggera = biciCorrente
     }
-})
-
-//funzione che compara i pesi
-function comparaBici (a, b){
-    return a - b;
+    
 }
-
-
+console.log(`la bicletta da corsa marca ${nome} pesa kg ${pesoKg} ed è la più leggera`)
 
 
 /*
