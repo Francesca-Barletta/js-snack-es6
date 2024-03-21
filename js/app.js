@@ -240,15 +240,16 @@ console.log(bicilette);
 let biciPiuLeggera = bicilette[0];
 for(let i = 1; i < bicilette.length; i++){
     const biciCorrente = bicilette[i]
-    const {nome, pesoKg} = biciCorrente;
+    //const {nome, pesoKg} = biciCorrente;
     console.log(biciCorrente);
     if(biciCorrente.pesoKg < biciPiuLeggera.pesoKg){
         biciPiuLeggera = biciCorrente
-        console.log(`la bicletta da corsa marca ${nome} pesa ${pesoKg} kg ed è la più leggera`)
+        //console.log(`la bicletta da corsa marca ${nome} pesa ${pesoKg} kg ed è la più leggera`)
     }
     
 }
-//console.log(`la bicletta da corsa marca ${nome} pesa ${pesoKg} kg ed è la più leggera`)
+const {nome, pesoKg} = biciPiuLeggera;
+console.log(`la bicletta da corsa marca ${nome} pesa ${pesoKg} kg ed è la più leggera`);
 
 
 /*
